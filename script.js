@@ -6,7 +6,7 @@ var app = angular.module("myApp", ["ngRoute"])
 .config(function($routeProvider) {
     $routeProvider
     .when("/", {
-        template:"<div>Welcome!!!!</div>"
+        template:""
         
     })
     .when("/login", {

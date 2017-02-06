@@ -8,18 +8,32 @@
 	</head>
 	<body ng-app="myApp" ng-controller="cntr_index">
         <br/><br/>
+        <hr/>
+        <div align="center">
+            <h2>Angularjs</h2>
+        </div>
+       
 		<div ng-hide="div1" >
-			<button ><a href="#login" >Log In</a></button>
-			<button ><a href="#sign_in">Sign Up</a></button>
+            <hr/>
+            <div align="left">
+                <button ><a href="#login" ><h2>Log In</h2></a></button>
+            </div>
+            <hr/>
+            <div align="right">
+                <button ><a href="#sign_in"><h2>Sign Up</h2></a></button>
+            </div>
+			<hr/>
+			
 		</div><br/><br/>
        
         <div ng-show="div1" >
     
-      <a href="#profile">Profile</a>
-      <a href="#message">Messages</a>
-      <a href="#logout">Logout</a> 
+          <a href="#profile">Profile</a><br/>
+          <a href="#message">Messages</a><br/>
+          <a href="#logout">Logout</a> <br/>
+          <hr/>
     
-</div><br/>
+        </div><br/>
         
 		<div ng-view=""></div>
         
