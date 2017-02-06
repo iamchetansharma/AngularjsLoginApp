@@ -1,0 +1,14 @@
+<div>
+    <form>
+        Username: <input type="text" ng-model="uname_E" ng-disabled="change"/><br/><br/>
+		Password: <input type="password" ng-model="pword_E" ng-disabled="change"/><br/><br/>
+		Firstname: <input type="text" ng-model="fname_E" ng-disabled="change"/><br/><br/>
+		Lastname: <input type="text" ng-model="lname_E" ng-disabled="change"/><br/><br/>
+		Email: <input type="email" ng-model="email_E" ng-disabled="change"/><br/><br/>
+		Phone: <input type="text" ng-model="phone_E" ng-disabled="change"/><br/><br/>
+		Location: <input type="text" ng-model="loc_E" ng-disabled="change"/><br/><br/>
+
+		<input type="button" value="Edit" ng-model="EditDetails" ng-click="profileEditClickEvent()" ng-disabled="show_btn1"/>
+        <input type="button" tng-model="submit" ng-click="profileUpdateClickEvent()" ng-disabled="show_btn2" value=" Save "/>
+    </form>
+</div>

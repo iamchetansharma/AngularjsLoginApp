@@ -1,0 +1,45 @@
+<div ng-controller="cntr_message">
+<div>
+        <input type="button" ng-click="inboxClickEvent()" value="Inbox"/>
+        <input type="button" ng-click="sentMailClickEvent()" value="Sent Mail"/>
+       
+    </div><br/>
+
+<div ng-show="msg_div">
+    <div  ng-repeat="obj in msgs|filter:{recipient : loggedUser}">
+    <form>
+        <p>{{$index}}</p>
+        <p>Sender: {{obj.sender}}</p>
+        <p>Title: {{obj.title}}</p>
+        <p> Message: {{obj.description}}</p>
+        <input type="button" value="Reply" ng-click="replyClickEvent(obj)"/>
+        <input type="button" value="Delete" ng-click="deleteClickEvent(obj)"/>
+    </form>   
+</div>
+</div>
+
+<div ng-show="!msg_div">
+    <div  ng-repeat="obj in msgs|filter:{ sender: loggedUser}">
+    <form>
+        <p>Recipient: {{obj.recipient}}</p>
+        <p>Title: {{obj.title}}</p>
+        <p> Message: {{obj.description}}</p>   
+        <input type="button" value="Delete" ng-click="deleteClickEvent(obj)"/>
+    </form>  
+</div>
+</div>
+
+<div>
+    <form>
+        To:
+        <input type="text" ng-model="toaddress"/><br/><br/>
+        Title: <input type="text" ng-model="msgTitle"/><br/><br/>
+        Message:<br/>
+        <textarea ng-model="mesg" rows="10" cols="60"></textarea><br/>
+        <br/>
+        <input type="button" value=" Send " ng-click="sendClickEvent()"/>
+        <input type="button" value=" cancel "/>  
+    </form>
+</div>
+</div>
+
